@@ -3,13 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Reaction Time Test</title>
+  <title>Reaction Time Challenge</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Reaction Time Test</h1>
-  <div id="screen">Click to Start</div>
+  <h1>Reaction Time Challenge</h1>
+
+  <label for="playerName">Name:</label>
+  <input type="text" id="playerName" placeholder="Enter your name" />
+
+  <label for="modeSelect">Mode:</label>
+  <select id="modeSelect">
+    <option value="normal">Normal</option>
+    <option value="easy">Easy</option>
+    <option value="hard">Hard</option>
+    <option value="challenge">30s Challenge</option>
+  </select>
+
+  <button id="startBtn">Start Game</button>
+
+  <div id="screen">Click "Start Game"</div>
+
   <p id="result"></p>
+  <p id="bestTime"></p>
+  <p id="clickCount"></p>
+
+  <!-- Sound and confetti -->
+  <audio id="beepSound" src="beep.mp3" preload="auto"></audio>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
